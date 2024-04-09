@@ -2,8 +2,6 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { StyledEngineProvider, CssVarsProvider } from '@mui/joy/styles';
 import demo from './demo';
-//import Demo2 from './Demo2';
-//import Component2 from './Component2';
 
 
 ReactDOM.createRoot(document.querySelector("#root")!).render(
@@ -11,8 +9,7 @@ ReactDOM.createRoot(document.querySelector("#root")!).render(
     <StyledEngineProvider injectFirst>
       <CssVarsProvider>
         <demo />
-  //           <Demo2 />
- //       <Component2 />
+
       </CssVarsProvider>
     </StyledEngineProvider>
   </React.StrictMode>
