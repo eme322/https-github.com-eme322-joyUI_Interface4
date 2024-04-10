@@ -7,10 +7,10 @@ import demo from './demo';
 ReactDOM.createRoot(document.querySelector("#root")!).render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
-      <CssVarsProvider injectFirst>
+      <CssVarsProvider>
         
         <demo />
-
+        
       </CssVarsProvider>
     </StyledEngineProvider>
   </React.StrictMode>
