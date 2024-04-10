@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { StyledEngineProvider, CssVarsProvider } from '@mui/joy/styles';
-import demo from './demo';
+import Demo from './Demo';
 
 
 ReactDOM.createRoot(document.querySelector("#root")!).render(
