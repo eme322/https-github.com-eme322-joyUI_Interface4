@@ -24,7 +24,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { ReactComponent as Logo } from '.https://www.boardx.us/content/images/2023/11/BoardX-Logo.png'; // Replace './logo.svg' with your actual logo file path
 
-const App: React.FC = () => {
+const Demo: React.FC = () => {
   return (
     <Box
       sx={{
@@ -82,4 +82,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Demo;
