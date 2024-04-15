@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { StyledEngineProvider, CssVarsProvider } from '@mui/joy/styles';
-import Demo from './demo';
+import { StyledEngineProvider, CssVarsProvider } from '@mui/joy/styles';//
+//import Demo from './demo';
 import SignIn from './SignIn';
 
 const rootElement = document.querySelector('#root');
@@ -16,7 +16,7 @@ root.render(
     <StyledEngineProvider injectFirst>
       <CssVarsProvider>
         
-        <Demo />
+//        <Demo />
         <SignIn />
         
       </CssVarsProvider>
