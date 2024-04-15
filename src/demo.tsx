@@ -1,10 +1,8 @@
-
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/joy/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { ReactComponent as Logo } from '.https://www.boardx.us/content/images/2023/11/BoardX-Logo.png'; // Replace './logo.svg' with your actual logo file path
 
 const Demo: React.FC = () => {
   return (
@@ -19,7 +17,7 @@ const Demo: React.FC = () => {
         padding: 4
       }}
     >
-      <Logo width="80" height="80" />
+      <img src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="Logo" width="80" height="80" />
       <Typography variant="h4" component="h1" sx={{ margin: 2 }}>
         Welcome to Boardx!
       </Typography>
@@ -65,3 +63,4 @@ const Demo: React.FC = () => {
 };
 
 export default Demo;
+
