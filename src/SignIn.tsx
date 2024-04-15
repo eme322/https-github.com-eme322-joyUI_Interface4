@@ -5,7 +5,7 @@ import Button from '@mui/joy/Button';
 import TextField from '@mui/joy/TextField';
 import Typography from '@mui/joy/Typography';
 
-export default function SignInForm() {
+export default function SignIn() {
   return (
     <Box
       component="form"
