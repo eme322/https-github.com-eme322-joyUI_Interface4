@@ -1,5 +1,5 @@
 import * as React from 'react';
-import SignIn from './SignIn'; 
+import SignIn from './src/SignIn'; 
 
 export default function Demo() {
   return (
