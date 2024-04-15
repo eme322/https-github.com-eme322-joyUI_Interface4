@@ -1,24 +1,15 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { StyledEngineProvider, CssVarsProvider } from '@mui/joy/styles';//
-//import Demo from './demo';
-import SignIn from './SignIn';
+import { StyledEngineProvider, CssVarsProvider } from '@mui/joy/styles';
+import demo from './Demo';
 
-const rootElement = document.querySelector('#root');
-const root = ReactDOM.createRoot(rootElement);
 
-root.render(
-
-//  ReactDOM.render(<SignIn />, document.querySelector('#app'));
-/*ReactDOM.createRoot(document.querySelector("#root")!).render(*/
+ReactDOM.createRoot(document.querySelector("#root")!).render(
   <React.StrictMode>
-    
     <StyledEngineProvider injectFirst>
       <CssVarsProvider>
         
-//        <Demo />
-        <SignIn />
-        
+        <Demo />
       </CssVarsProvider>
     </StyledEngineProvider>
   </React.StrictMode>
