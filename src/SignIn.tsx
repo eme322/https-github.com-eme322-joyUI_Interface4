@@ -18,17 +18,37 @@ interface State {
 }
 
 const SignIn: React.FC = () => {
-  const [values, setValues] = React.useState<State>({
+  const [values, setValues] = React.useState({
     email: '',
     password: '',
     showPassword: false,
   });
 
-  // Function implementations remain the same
+  const handleChange = (prop: keyof typeof values) => (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword,
+    });
+  };
+
+  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+  };
+
+  // Make sure this function is correctly defined
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // Add your form submission logic here
+    console.log('Form submitted', values);
+  };
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Typography level="h4" component="h1" gutterBottom> // Adjust 'level' based on Joy's API
+      <Typography variant="h4" component="h1" gutterBottom>
         Welcome to Boardx!
       </Typography>
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
@@ -55,20 +75,24 @@ const SignIn: React.FC = () => {
           autoComplete="current-password"
           value={values.password}
           onChange={handleChange('password')}
-          endDecorator={ // Adjust based on Joy's API for end adornments
-            <IconButton
-              aria-label="toggle password visibility"
-              onClick={handleClickShowPassword}
-              onMouseDown={handleMouseDownPassword}
-            >
-              {values.showPassword ? <VisibilityOff /> : <Visibility />}
-            </IconButton>
-          }
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                >
+                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
         />
         <Button
           type="submit"
           fullWidth
-          variant="solid"
+          variant="contained"
           sx={{ mt: 3, mb: 2 }}
         >
           Sign In
