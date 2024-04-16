@@ -1,9 +1,8 @@
-import * as React from 'react';
-import SignIn from './subdirectory/SignIn'; 
+import React from 'react';
+import SignIn from './subdirectory/SignIn'; // Adjust the import path based on your folder structure
 
-export default function Demo() {
-  return (
-     <SignIn />
-  );
-}
+const Demo: React.FC = () => {
+  return <SignIn />;
+};
 
+export default Demo;
