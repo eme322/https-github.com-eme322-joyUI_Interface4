@@ -51,7 +51,6 @@ const SignIn: React.FC = () => {
       </Typography>
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
         <TextField
-          required
           fullWidth
           id="email"
           label="Email Address"
@@ -63,7 +62,6 @@ const SignIn: React.FC = () => {
           sx={{ my: 2 }} // Adjusting vertical margins via sx prop
         />
         <TextField
-          required
           fullWidth
           name="password"
           label="Password"
