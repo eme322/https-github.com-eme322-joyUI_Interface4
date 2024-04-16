@@ -1,8 +1,6 @@
-// Assuming you have validated that `value`, `onChange`, and `inputProps` are used correctly according to the documentation.
 import * as React from 'react';
 import Box from '@mui/joy/Box';
 import Button from '@mui/joy/Button';
-import TextField from '@mui/joy/TextField';
 import Typography from '@mui/joy/Typography';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/joy/IconButton';
@@ -48,42 +46,19 @@ const SignIn: React.FC = () => {
         Welcome to Boardx!
       </Typography>
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-        <TextField
+        <input
+          type="email"
           value={values.email}
-          onChange={handleChange('email')}
-          sx={{ width: '100%', my: 2 }}
-          inputProps={{
-            placeholder: 'Email Address',
-            id: 'email',
-            name: 'email',
-            autoComplete: 'email',
-            autoFocus: true
-          }}
+          onChange={(e) => handleChange('email')(e as React.ChangeEvent<HTMLInputElement>)}
+          placeholder="Email Address"
+          style={{ width: '100%', margin: '8px 0' }}
         />
-        <TextField
-          type={values.showPassword ? 'text' : 'password'}
+        <input
+          type="password"
           value={values.password}
-          onChange={handleChange('password')}
-          sx={{ width: '100%', mb: 2 }}
-          inputProps={{
-            placeholder: 'Password',
-            id: 'password',
-            name: 'password',
-            autoComplete: 'current-password'
-          }}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                >
-                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
+          onChange={(e) => handleChange('password')(e as React.ChangeEvent<HTMLInputElement>)}
+          placeholder="Password"
+          style={{ width: '100%', margin: '8px 0' }}
         />
         <Button
           type="submit"
@@ -105,4 +80,3 @@ const SignIn: React.FC = () => {
 };
 
 export default SignIn;
-
