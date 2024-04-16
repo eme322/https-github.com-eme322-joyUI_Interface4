@@ -4,10 +4,8 @@ import Box from '@mui/joy/Box';
 import Button from '@mui/joy/Button';
 import TextField from '@mui/joy/TextField';
 import Typography from '@mui/joy/Typography';
-
-// You might need to find Joy UI equivalents or custom solutions if not available
 import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/joy/IconButton'; // Adjust if Joy has an equivalent
+import IconButton from '@mui/joy/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
@@ -18,13 +16,13 @@ interface State {
 }
 
 const SignIn: React.FC = () => {
-  const [values, setValues] = React.useState({
+  const [values, setValues] = React.useState<State>({
     email: '',
     password: '',
     showPassword: false,
   });
 
-  const handleChange = (prop: keyof typeof values) => (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [prop]: event.target.value });
   };
 
@@ -50,25 +48,25 @@ const SignIn: React.FC = () => {
         Welcome to Boardx!
       </Typography>
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-        <label htmlFor="email">Email Address</label>
         <TextField
-          autoFocus
           value={values.email}
           onChange={handleChange('email')}
           sx={{ width: '100%', my: 2 }}
           inputProps={{
+            placeholder: 'Email Address',
             id: 'email',
             name: 'email',
-            autoComplete: 'email'
+            autoComplete: 'email',
+            autoFocus: true
           }}
         />
-        <label htmlFor="password">Password</label>
         <TextField
           type={values.showPassword ? 'text' : 'password'}
           value={values.password}
           onChange={handleChange('password')}
           sx={{ width: '100%', mb: 2 }}
           inputProps={{
+            placeholder: 'Password',
             id: 'password',
             name: 'password',
             autoComplete: 'current-password'
