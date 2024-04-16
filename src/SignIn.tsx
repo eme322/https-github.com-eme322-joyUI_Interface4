@@ -1,4 +1,4 @@
-// SignIn.tsx
+// Assuming you have validated that `value`, `onChange`, and `inputProps` are used correctly according to the documentation.
 import * as React from 'react';
 import Box from '@mui/joy/Box';
 import Button from '@mui/joy/Button';
@@ -105,3 +105,4 @@ const SignIn: React.FC = () => {
 };
 
 export default SignIn;
+
