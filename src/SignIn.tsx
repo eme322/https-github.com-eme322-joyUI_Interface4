@@ -48,7 +48,7 @@ const SignIn: React.FC = () => {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Typography variant="h4" component="h1" gutterBottom>
+      <Typography level="h4" component="h1" gutterBottom>
         Welcome to Boardx!
       </Typography>
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
