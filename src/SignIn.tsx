@@ -50,8 +50,8 @@ const SignIn: React.FC = () => {
         Welcome to Boardx!
       </Typography>
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+        <label htmlFor="email">Email Address</label>
         <TextField
-          label="Email Address"
           autoFocus
           value={values.email}
           onChange={handleChange('email')}
@@ -62,8 +62,8 @@ const SignIn: React.FC = () => {
             autoComplete: 'email'
           }}
         />
+        <label htmlFor="password">Password</label>
         <TextField
-          label="Password"
           type={values.showPassword ? 'text' : 'password'}
           value={values.password}
           onChange={handleChange('password')}
