@@ -39,10 +39,8 @@ const SignIn: React.FC = () => {
     event.preventDefault();
   };
 
-  // Make sure this function is correctly defined
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Add your form submission logic here
     console.log('Form submitted', values);
   };
 
@@ -53,7 +51,6 @@ const SignIn: React.FC = () => {
       </Typography>
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
         <TextField
-          margin="normal"
           required
           fullWidth
           id="email"
@@ -63,9 +60,9 @@ const SignIn: React.FC = () => {
           autoFocus
           value={values.email}
           onChange={handleChange('email')}
+          sx={{ my: 2 }} // Adjusting vertical margins via sx prop
         />
         <TextField
-          margin="normal"
           required
           fullWidth
           name="password"
@@ -75,6 +72,7 @@ const SignIn: React.FC = () => {
           autoComplete="current-password"
           value={values.password}
           onChange={handleChange('password')}
+          sx={{ mb: 2 }} // Adjusting bottom margin via sx prop
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
