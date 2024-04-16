@@ -6,7 +6,7 @@ import TextField from '@mui/joy/TextField';
 import Typography from '@mui/joy/Typography';
 
 // You might need to find Joy UI equivalents or custom solutions if not available
-import InputAdornment from '@mui/joy/InputAdornment'; // This is hypothetical; Joy may not have this component
+import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/joy/IconButton'; // Adjust if Joy has an equivalent
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
