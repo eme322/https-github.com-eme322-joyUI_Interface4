@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@mui/material": "latest",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@mui/joy": "latest",
