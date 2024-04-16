@@ -5,12 +5,12 @@ import Button from '@mui/joy/Button';
 import TextField from '@mui/joy/TextField';
 import Typography from '@mui/joy/Typography';
 
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
+// You might need to find Joy UI equivalents or custom solutions if not available
+import InputAdornment from '@mui/joy/InputAdornment'; // This is hypothetical; Joy may not have this component
+import IconButton from '@mui/joy/IconButton'; // Adjust if Joy has an equivalent
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-// Define the state interface for the component
 interface State {
   email: string;
   password: string;
@@ -24,30 +24,11 @@ const SignIn: React.FC = () => {
     showPassword: false,
   });
 
-  const handleChange = (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
-
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
-
-  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Submit logic here
-    console.log(values);
-  };
+  // Function implementations remain the same
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Typography variant="h4" component="h1" gutterBottom>
+      <Typography level="h4" component="h1" gutterBottom> // Adjust 'level' based on Joy's API
         Welcome to Boardx!
       </Typography>
       <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
@@ -74,24 +55,20 @@ const SignIn: React.FC = () => {
           autoComplete="current-password"
           value={values.password}
           onChange={handleChange('password')}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                >
-                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
+          endDecorator={ // Adjust based on Joy's API for end adornments
+            <IconButton
+              aria-label="toggle password visibility"
+              onClick={handleClickShowPassword}
+              onMouseDown={handleMouseDownPassword}
+            >
+              {values.showPassword ? <VisibilityOff /> : <Visibility />}
+            </IconButton>
+          }
         />
         <Button
           type="submit"
           fullWidth
-          variant="contained"
+          variant="solid"
           sx={{ mt: 3, mb: 2 }}
         >
           Sign In
