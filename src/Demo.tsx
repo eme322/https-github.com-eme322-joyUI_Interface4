@@ -1,8 +1,12 @@
 import React from 'react';
-import SignIn from './SignIn'; // Adjust the import path based on your folder structure
+import SignInForm from './SignInForm'; // Import the SignInForm component
 
-const Demo: React.FC = () => {
-  return <SignIn />;
+const Demo = () => {
+  return (
+    <div className="App">
+      <SignInForm />
+    </div>
+  );
 };
 
 export default Demo;
