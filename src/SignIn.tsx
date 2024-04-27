@@ -1,82 +1,48 @@
-import * as React from 'react';
-import Box from '@mui/joy/Box';
-import Button from '@mui/joy/Button';
-import Typography from '@mui/joy/Typography';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/joy/IconButton';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import React from 'react';
+import { Button, TextField, Card, CardContent, Typography } from '@mui/joy';
 
-interface State {
-  email: string;
-  password: string;
-  showPassword: boolean;
+interface SignInFormProps {
+  // Add any props you might need for the form
 }
 
-const SignIn: React.FC = () => {
-  const [values, setValues] = React.useState<State>({
-    email: '',
-    password: '',
-    showPassword: false,
-  });
+const SignInForm: React.FC<SignInFormProps> = () => {
+  // State variables for email and password
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
 
-  const handleChange = (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
-
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
-
-  const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
+  // Handle form submission
+  const handleSubmit = (event) => {
     event.preventDefault();
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log('Form submitted', values);
+    // Handle form submission logic here
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Typography level="h4" component="h1" gutterBottom>
-        Welcome to Boardx!
-      </Typography>
-      <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-        <input
+    <Card sx={{ maxWidth: 400, mx: 'auto', my: 4 }}>
+      <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <Typography variant="h4" component="h1" align="center">
+          Welcome to Boardx!
+        </Typography>
+        <TextField
+          label="Email"
           type="email"
-          value={values.email}
-          onChange={(e) => handleChange('email')(e as React.ChangeEvent<HTMLInputElement>)}
-          placeholder="Email Address"
-          style={{ width: '100%', margin: '8px 0' }}
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
         />
-        <input
+        <TextField
+          label="Password"
           type="password"
-          value={values.password}
-          onChange={(e) => handleChange('password')(e as React.ChangeEvent<HTMLInputElement>)}
-          placeholder="Password"
-          style={{ width: '100%', margin: '8px 0' }}
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
         />
-        <Button
-          type="submit"
-          fullWidth
-          variant="contained"
-          sx={{ mt: 3, mb: 2 }}
-        >
+        <Button variant="solid" onClick={handleSubmit}>
           Sign In
         </Button>
-        <Button
-          fullWidth
-          sx={{ textTransform: 'none' }}
-        >
+        <Typography variant="body2" align="center">
           Forgot Password
-        </Button>
-      </Box>
-    </Box>
+        </Typography>
+      </CardContent>
+    </Card>
   );
 };
 
-export default SignIn;
+export default SignInForm;
