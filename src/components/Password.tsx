@@ -14,7 +14,7 @@ export default function PasswordInput() {
   };
 
   return (
-    <FormControl> // Un-comment this line or use a fragment if FormControl is not needed
+    <FormControl>
       <FormLabel htmlFor="password-input">Password</FormLabel>
       <Input
         id="password-input"
@@ -39,6 +39,6 @@ export default function PasswordInput() {
           </IconButton>
         }
       />
-    </FormControl> // Ensure this closing tag is present
+    </FormControl>
   );
 }
