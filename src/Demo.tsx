@@ -80,16 +80,16 @@ export default function SignInSheet() {
           {
           <FormControl>
             <div style={{ margin: "20px 0" }}>
-              //<Email />
+              <Email />
             </div>
             <div style={{ margin: "20px 0" }}>
-              //<Password />
+              <Password />
             </div>
             <div style={{ margin: "20px 0" }}>
               <LogInButton />
             </div>
             <div style={{ margin: "20px 0" }}>
-              //<ForgotPassword />
+              <ForgotPassword />
             </div>
           </FormControl>
           }
