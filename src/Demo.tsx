@@ -73,11 +73,6 @@ export default function SignInSheet() {
             }}
           >
 
-            /*
-            <Typography sx = {{ color: "black"}} level = "h3">Welcome to BoardX!</Typography>
-          </div>
-          */
-
 <Typography 
   sx={{ 
     color: "black", 
@@ -86,12 +81,13 @@ export default function SignInSheet() {
     fontSize: '30px', // Example font size, adjust as needed
     fontWeight: 'bold', // Example font weight, adjust as needed
   }} 
-  level="h3"
+  level="h2"
 >
   Welcome to BoardX!
 </Typography>
 
 
+            /*
               <FormControl>
           <div style={{ margin: "20px 0" }}>
             <Email />
@@ -106,6 +102,7 @@ export default function SignInSheet() {
             <ForgotPassword />
           </div>
                 </FormControl>
+            */
         </div>
       </Card>
     </div>
