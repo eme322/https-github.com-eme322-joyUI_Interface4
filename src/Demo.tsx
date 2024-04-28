@@ -72,7 +72,7 @@ export default function SignInSheet() {
               fontSize: '30px',
               fontWeight: 'bold',
             }} 
-            level="h3"
+            level="h4"
           >
             Welcome to BoardX! 👋
           </Typography>
