@@ -12,7 +12,8 @@
   },
   "description": "https://github.com/mui/material-ui/blob/v5.15.15/docs/data/joy/getting-started/usage/ButtonUsage.tsx",
   "devDependencies": {
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "@babel/plugin-proposal-private-property-in-object": "^7.x"  //latest version compatible with your setup
   },
   "main": "index.tsx",
   "scripts": {
