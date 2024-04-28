@@ -9,7 +9,8 @@ import LogInButton from "./components/LogInButton";
 import ForgotPassword from "./components/ForgotPassword";
 import { extendTheme } from "@mui/joy";
 import FormControl from "@mui/joy/FormControl";
-import './styles.css';
+import './styles.css'; // Import the styles.css file
+
 
 const theme = extendTheme({colorSchemes: {
   light: {
