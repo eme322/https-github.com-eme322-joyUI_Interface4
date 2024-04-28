@@ -42,8 +42,44 @@ export default function SignInSheet() {
         alignItems: "center",
         minHeight: "100vh",
         backgroundColor: "white",
+        flexDirection: "column", // Stack children vertically
       }}
     >
+
+
+      
+            {/* Add the Email and Password labels here, outside and above the Card */}
+      <Typography
+        sx={{
+          mt: 2,
+          mb: 2, // Adjust the margin as needed
+          fontSize: "20px", // Adjust font size as needed
+          color: "rgb(0,0,0)", // Change the color as needed
+          alignSelf: "start", // Align to the start of the container
+          width: "100%", // Take full width
+          paddingLeft: "20px", // Add padding to match the Card's internal spacing
+        }}
+        component="h2"
+      >
+        Email
+      </Typography>
+      
+      <Typography
+        sx={{
+          mt: 2,
+          mb: 2, // Adjust the margin as needed
+          fontSize: "20px", // Adjust font size as needed
+          color: "rgb(0,0,0)", // Change the color as needed
+          alignSelf: "start", // Align to the start of the container
+          width: "100%", // Take full width
+          paddingLeft: "20px", // Add padding to match the Card's internal spacing
+        }}
+        component="h2"
+      >
+        Password
+      </Typography>
+
+      
       <Card
         variant="solid"
         sx={(theme) => ({
@@ -64,11 +100,14 @@ export default function SignInSheet() {
             style={{
               maxWidth: "150px", // Set the maximum width to 150px
               height: "auto"  // This will keep the aspect ratio intact
+
+                /*
               textAlign: "center",
               fontFamily: "Inter, sans-serif",
               fontWeight: "40px",
               fontSize: "30px",
               color: "rgb(255,255,255)"
+              */
             }}
           >
             <Typography sx = {{ color: "black"}} level = "h3">Welcome to BoardX!</Typography>
