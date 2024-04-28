@@ -3,6 +3,7 @@ import * as React from 'react';
 import ReactDOM from 'react-dom/client';
 import { StyledEngineProvider, CssVarsProvider } from '@mui/joy/styles';
 import Demo from './Demo';
+import styles from './styles';
 
 ReactDOM.createRoot(document.querySelector("#root")!).render(
   <React.StrictMode>
