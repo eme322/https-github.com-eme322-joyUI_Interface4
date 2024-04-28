@@ -61,55 +61,43 @@ export default function SignInSheet() {
           boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", // Adjusted boxShadow value
         })}
       >
-        <div style={{ width: "100%", textAlign: "center" }}>
+          <div style={{ width: "100%", textAlign: "center" }}>
           <img id="logo" src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="BoardX Logo" />
-          <div
-            style={{
-              textAlign: "left",
-              fontFamily: "Inter, sans-serif",
-              fontWeight: "40px",
-              fontSize: "30px",
-              color: "rgb(255,255,255)"
-            }}
+          <Typography 
+            sx={{ 
+              color: "black", 
+              textAlign: 'center',
+              width: '100%',
+              fontSize: '30px',
+              fontWeight: 'bold',
+            }} 
+            level="h2"
           >
-
-<Typography 
-  sx={{ 
-    color: "black", 
-    textAlign: 'center', // Centers text horizontally
-    width: '100%', // Ensures the text block takes the full width of its container
-    fontSize: '30px', // Example font size, adjust as needed
-    fontWeight: 'bold', // Example font weight, adjust as needed
-  }} 
-  level="h2"
->
-  Welcome to BoardX!
-</Typography>
-
-/*
-          
-              <FormControl>
-          <div style={{ margin: "20px 0" }}>
-            <Email />
-          </div>
-          <div style={{ margin: "20px 0" }}>
-            <Password />
-          </div>
-          <div style={{ margin: "20px 0" }}>
-            <LogInButton />
-          </div>
-          <div style={{ margin: "20px 0" }}>
-            <ForgotPassword />
-          </div>
-                </FormControl>
-            */
-            
+            Welcome to BoardX!
+          </Typography>
+          {/* The FormControl and its children components are commented out.
+               If you want them to render, remove the comment block. */}
+          {/*
+          <FormControl>
+            <div style={{ margin: "20px 0" }}>
+              <Email />
+            </div>
+            <div style={{ margin: "20px 0" }}>
+              <Password />
+            </div>
+            <div style={{ margin: "20px 0" }}>
+              <LogInButton />
+            </div>
+            <div style={{ margin: "20px 0" }}>
+              <ForgotPassword />
+            </div>
+          </FormControl>
+          */}
         </div>
+      </Card>
     </div>
   );
 }
-
-
 
   
         
