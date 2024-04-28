@@ -1,4 +1,4 @@
-// joyUI_Interface1/src/styles.js
+// joyUI_Interface1/src/styles.ts
 
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
