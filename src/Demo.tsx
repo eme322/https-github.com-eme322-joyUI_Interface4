@@ -72,8 +72,26 @@ export default function SignInSheet() {
               color: "rgb(255,255,255)"
             }}
           >
+
+            /*
             <Typography sx = {{ color: "black"}} level = "h3">Welcome to BoardX!</Typography>
           </div>
+          */
+
+<Typography 
+  sx={{ 
+    color: "black", 
+    textAlign: 'center', // Centers text horizontally
+    width: '100%', // Ensures the text block takes the full width of its container
+    fontSize: '30px', // Example font size, adjust as needed
+    fontWeight: 'bold', // Example font weight, adjust as needed
+  }} 
+  level="h3"
+>
+  Welcome to BoardX!
+</Typography>
+
+
               <FormControl>
           <div style={{ margin: "20px 0" }}>
             <Email />
