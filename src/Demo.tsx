@@ -1,4 +1,3 @@
-/*
 //Demo.tsx
 import * as React from "react";
 import Card from "@mui/joy/Card";
@@ -74,17 +73,8 @@ export default function SignInSheet() {
               fontSize: "30px",
               color: "rgb(255,255,255)"
 
-
             }}
           >
-
-*/
-
-
-
-
-            
-            /*
             <Typography sx = {{ color: "black"}} level = "h3">Welcome to BoardX!</Typography>
           </div>
               <FormControl>
@@ -101,97 +91,9 @@ export default function SignInSheet() {
             <ForgotPassword />
           </div>
                 </FormControl>
-          */
-          /*
         </div>
       </Card>
     </div>
   );
 }
-
-*/
-
-
-
-
-import React, { useState } from "react";
-import Card from "@mui/joy/Card";
-import Typography from "@mui/joy/Typography";
-import Email from "./components/Email";
-import Password from "./components/Password";
-import AspectRatio from "@mui/joy/AspectRatio";
-import LogInButton from "./components/LogInButton";
-import ForgotPassword from "./components/ForgotPassword";
-import { extendTheme } from "@mui/joy";
-import FormControl from "@mui/joy/FormControl";
-
-const theme = extendTheme({
-  colorSchemes: {
-    light: {
-      shadowChannel: '12 12 12',
-    },
-    dark: {
-      shadowChannel: '0 0 0',
-    },
-  },
-});
-
-export default function SignInSheet() {
-
-  const [email, setEmail] = useState('');
-  const [error, setError] = React.useState(false);
-
-  const handleSubmit = () => {
-    if (!email.trim()) {
-      setError(true);
-    } else {
-      setError(false);
-      // Handle form submission logic here
-    }
-  };
-
-  return (
-    <div className="SignInSheet">
-      <Card
-        variant="solid"
-        sx={(theme) => ({
-          ...styles.card,
-        })}
-      >
-        <div style={{ width: "100%", textAlign: "center" }}>
-          <img src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="BoardX Logo" />
-          <Typography sx = {{ color: "rgb(255,255,255)"}} level = "h3">Welcome to BoardX!</Typography>
-        </div>
-        <FormControl>
-          <div style={{ margin: "20px 0" }}>
-            <Email />
-          </div>
-          <div style={{ margin: "20px 0" }}>
-            <Password />
-          </div>
-          <div style={{ margin: "20px 0" }}>
-            <LogInButton />
-          </div>
-          <div style={{ margin: "20px 0" }}>
-            <ForgotPassword />
-          </div>
-        </FormControl>
-      </Card>
-    </div>
-  );
-}
-
-const styles = {
-  card: {
-    width: 450,
-    height: 406,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "20px",
-    backgroundColor: "#121212",
-    boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", // Adjusted boxShadow value
-  },
-};
 
