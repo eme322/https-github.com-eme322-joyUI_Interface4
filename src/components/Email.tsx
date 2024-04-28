@@ -2,8 +2,9 @@ import * as React from "react";
 import Input from "@mui/joy/Input";
 import FormControl from '@mui/joy/FormControl';
 import FormLabel from '@mui/joy/FormLabel';
-import FormHelperText from '@mui/joy/FormHelperText';
-import { InfoOutlined } from "@mui/icons-material";
+
+//import FormHelperText from '@mui/joy/FormHelperText';
+//import { InfoOutlined } from "@mui/icons-material";
 
 
 export default function EmailInput() {
@@ -12,15 +13,15 @@ export default function EmailInput() {
       <FormLabel htmlFor="email-input">Email</FormLabel>
       <Input
         id="email-input"
+        type="email" // Add type for email inputs
         variant="outlined"
         color="primary"
         sx={{ backgroundColor: "white", "--Input-focusedHighlight": "gray" }}
-        placeholder="Email"
+        placeholder="Email" 
       />
     </FormControl>
   );
 }
-
 
 
 /*
