@@ -1,4 +1,4 @@
-//Demo.tsx
+
 import * as React from "react";
 import Card from "@mui/joy/Card";
 import Typography from "@mui/joy/Typography";
@@ -9,7 +9,6 @@ import LogInButton from "./components/LogInButton";
 import ForgotPassword from "./components/ForgotPassword";
 import { extendTheme } from "@mui/joy";
 import FormControl from "@mui/joy/FormControl";
-
 
 const theme = extendTheme({colorSchemes: {
   light: {
@@ -31,6 +30,7 @@ export default function SignInSheet() {
       setError(true);
     } else {
       setError(false);
+      // Handle form submission logic here
     }
   };
 
@@ -43,8 +43,7 @@ export default function SignInSheet() {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
-        backgroundColor: "white",
-
+        backgroundColor: "#121212",
       }}
     >
       <Card
@@ -57,25 +56,22 @@ export default function SignInSheet() {
           alignItems: "center",
           justifyContent: "center",
           padding: "20px",
-          backgroundColor: "white",
-          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)", // Adjusted boxShadow value
+          backgroundColor: "#121212",
+          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", // Adjusted boxShadow value
         })}
       >
         <div style={{ width: "100%", textAlign: "center" }}>
           <img src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="BoardX Logo" />
           <div
             style={{
-              maxWidth: "150px", // Set the maximum width to 150px
-              height: "auto"  // This will keep the aspect ratio intact
-              textAlign: "center",
+              textAlign: "left",
               fontFamily: "Inter, sans-serif",
               fontWeight: "40px",
               fontSize: "30px",
               color: "rgb(255,255,255)"
-
             }}
           >
-            <Typography sx = {{ color: "black"}} level = "h3">Welcome to BoardX!</Typography>
+            <Typography sx = {{ color: "rgb(255,255,255)"}} level = "h3">Welcome to BoardX!</Typography>
           </div>
               <FormControl>
           <div style={{ margin: "20px 0" }}>
@@ -97,3 +93,7 @@ export default function SignInSheet() {
   );
 }
 
+
+
+  
+        
