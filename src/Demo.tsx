@@ -159,7 +159,7 @@ export default function SignInSheet() {
         })}
       >
         <div style={{ width: "100%", textAlign: "center" }}>
-          <img src="boardxlogo.png" alt="BoardX Logo" />
+          <img src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="BoardX Logo" />
           <Typography sx = {{ color: "rgb(255,255,255)"}} level = "h3">Welcome to BoardX!</Typography>
         </div>
         <FormControl>
