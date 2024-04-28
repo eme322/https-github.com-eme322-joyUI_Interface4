@@ -22,7 +22,8 @@ export const globalStyles = () => (
         padding: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       }
-      #logo {
+      #logo {      
+  margin-top: 20px;
   width: 100px; /* Adjust width as needed */
   height: auto; /* This will maintain the aspect ratio */
 }
