@@ -5,17 +5,12 @@ import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
 
 export const ForgotPasswordLink = styled.a`
-  width: 450px;
-  color: #D8819E;
-  display: inline-block;
-  padding: 12px;
-  border: 1px solid #D8819E;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
+  color: #D8819E; // Your brand color or whatever color you want the link to be
+  text-decoration: none; // No underline by default
   cursor: pointer;
   &:hover {
-    background-color: #430A1F;
+    text-decoration: underline; // Underline on hover to indicate interactivity
+    color: #your-hover-color; // Optionally change color on hover
   }
 `;
 
