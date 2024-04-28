@@ -59,9 +59,11 @@ export default function SignInSheet() {
         })}
       >
         <div style={{ width: "100%", textAlign: "center" }}>
-          <img src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" />
+          <img src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="BoardX Logo" />
           <div
             style={{
+              maxWidth: "150px", // Set the maximum width to 150px
+              height: "auto"  // This will keep the aspect ratio intact
               textAlign: "center",
               fontFamily: "Inter, sans-serif",
               fontWeight: "40px",
