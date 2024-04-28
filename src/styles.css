@@ -1,0 +1,49 @@
+.container {
+  margin: -8px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  flex-direction: column;
+}
+
+.login-card {
+  width: 450px;
+  height: 406px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  max-width: 150px; /* Adjust as needed */
+  height: auto;
+}
+
+.welcome-message {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400; /* Changed to a numeric value */
+  font-size: 30px;
+  color: black;
+  margin-top: 20px; /* Space above the welcome message */
+}
+
+.input-field {
+  margin-top: 20px; /* Space between input fields */
+  margin-bottom: 20px; /* Space between input fields */
+}
+
+.login-button {
+  margin-top: 20px;
+}
+
+.forgot-password {
+  margin-top: 20px;
+}
