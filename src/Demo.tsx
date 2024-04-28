@@ -86,8 +86,8 @@ export default function SignInSheet() {
   Welcome to BoardX!
 </Typography>
 
-
-            /*
+/*
+          
               <FormControl>
           <div style={{ margin: "20px 0" }}>
             <Email />
@@ -103,8 +103,8 @@ export default function SignInSheet() {
           </div>
                 </FormControl>
             */
+            
         </div>
-      </Card>
     </div>
   );
 }
