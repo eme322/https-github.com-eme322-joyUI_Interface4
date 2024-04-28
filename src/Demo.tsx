@@ -114,35 +114,84 @@ export default function SignInSheet() {
 
 
 
-import * as React from "react";
+import React, { useState } from "react";
 import Card from "@mui/joy/Card";
 import Typography from "@mui/joy/Typography";
-import TextField from '@mui/material/TextField'; // Import TextField
+import Email from "./components/Email";
+import Password from "./components/Password";
+import AspectRatio from "@mui/joy/AspectRatio";
 import LogInButton from "./components/LogInButton";
 import ForgotPassword from "./components/ForgotPassword";
-import './styles.css'; // Make sure this path is correct based on where you place your styles.css file
+import { extendTheme } from "@mui/joy";
+import FormControl from "@mui/joy/FormControl";
+
+const theme = extendTheme({
+  colorSchemes: {
+    light: {
+      shadowChannel: '12 12 12',
+    },
+    dark: {
+      shadowChannel: '0 0 0',
+    },
+  },
+});
 
 export default function SignInSheet() {
 
+  const [email, setEmail] = useState('');
+  const [error, setError] = React.useState(false);
+
+  const handleSubmit = () => {
+    if (!email.trim()) {
+      setError(true);
+    } else {
+      setError(false);
+      // Handle form submission logic here
+    }
+  };
+
   return (
-    <div className="container">
-      <Card className="login-card">
-        <img 
-          src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" 
-          alt="BoardX Logo" 
-          className="logo"
-        />
-        <Typography level="h3" className="welcome-message">
-          Welcome to BoardX!
-        </Typography>
-        <FormControl fullWidth className="form-control">
-          <TextField label="Email" type="email" variant="outlined" className="input-field" />
-          <TextField label="Password" type="password" variant="outlined" className="input-field" />
-          <LogInButton className="login-button" />
+    <div className="SignInSheet">
+      <Card
+        variant="solid"
+        sx={(theme) => ({
+          ...styles.card,
+        })}
+      >
+        <div style={{ width: "100%", textAlign: "center" }}>
+          <img src="boardxlogo.png" alt="BoardX Logo" />
+          <Typography sx = {{ color: "rgb(255,255,255)"}} level = "h3">Welcome to BoardX!</Typography>
+        </div>
+        <FormControl>
+          <div style={{ margin: "20px 0" }}>
+            <Email />
+          </div>
+          <div style={{ margin: "20px 0" }}>
+            <Password />
+          </div>
+          <div style={{ margin: "20px 0" }}>
+            <LogInButton />
+          </div>
+          <div style={{ margin: "20px 0" }}>
+            <ForgotPassword />
+          </div>
         </FormControl>
-        <ForgotPassword className="forgot-password" />
       </Card>
     </div>
   );
 }
+
+const styles = {
+  card: {
+    width: 450,
+    height: 406,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "20px",
+    backgroundColor: "#121212",
+    boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", // Adjusted boxShadow value
+  },
+};
 
