@@ -72,9 +72,9 @@ export default function SignInSheet() {
               fontSize: '30px',
               fontWeight: 'bold',
             }} 
-            level="h2"
+            level="h3"
           >
-            Welcome to BoardX!
+            Welcome to BoardX! 👋
           </Typography>
           {/* The FormControl and its children components are commented out.
                If you want them to render, remove the comment block. */}
