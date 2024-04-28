@@ -48,8 +48,6 @@ export default function SignInSheet() {
         flexDirection: "column", // Stack children vertically
       }}
     >
-
-      
       <Card
         variant="solid"
         sx={(theme) => ({
@@ -80,25 +78,6 @@ export default function SignInSheet() {
             }}
           >
 
-        <Typography level="h3" sx={{ /* ... */    /* }}>
-        Welcome to BoardX!
-      </Typography>
-      <FormControl fullWidth>
-        <TextField
-          label="Email"
-          type="email"
-          variant="outlined"
-          margin="normal" // This adds some space around the TextField
-        />
-        <TextField
-          label="Password"
-          type="password"
-          variant="outlined"
-          margin="normal" // This adds some space around the TextField
-        />
-        <LogInButton />
-      </FormControl>
-      <ForgotPassword />
 */
 
 
@@ -144,7 +123,6 @@ import ForgotPassword from "./components/ForgotPassword";
 import './styles.css'; // Make sure this path is correct based on where you place your styles.css file
 
 export default function SignInSheet() {
-  // ... useState hooks
 
   return (
     <div className="container">
