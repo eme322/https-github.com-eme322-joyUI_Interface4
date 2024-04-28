@@ -15,7 +15,7 @@ export default function InfoBar() {
     <Input
       color="neutral"
       type={showPassword ? 'text' : 'password'}
-      sx={{ backgroundColor: '#0B0D0E' }}
+      sx={{ backgroundColor: 'white' }}
       placeholder="Password"
       endDecorator={
         <Button
@@ -26,7 +26,7 @@ export default function InfoBar() {
             display: 'flex',
             alignItems: 'center', // Center vertically
             justifyContent: 'center', // Center horizontally
-            backgroundColor: '#0B0D0E'
+            backgroundColor: 'white'
           }}
         >
           {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
