@@ -42,7 +42,7 @@ export default function SignInSheet() {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
-        backgroundColor: "#121212",
+        backgroundColor: "white",
       }}
     >
       <Card
@@ -55,7 +55,7 @@ export default function SignInSheet() {
           alignItems: "center",
           justifyContent: "center",
           padding: "20px",
-          backgroundColor: "#121212",
+          backgroundColor: "white",
           boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", // Adjusted boxShadow value
         })}
       >
