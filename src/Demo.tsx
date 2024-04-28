@@ -29,7 +29,6 @@ export default function SignInSheet() {
       setError(true);
     } else {
       setError(false);
-      // Handle form submission logic here
     }
   };
 
@@ -60,17 +59,17 @@ export default function SignInSheet() {
         })}
       >
         <div style={{ width: "100%", textAlign: "center" }}>
-          <img src="boardxlogo.png" alt="BoardX Logo" />
+          <img src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" />
           <div
             style={{
-              textAlign: "left",
+              textAlign: "center",
               fontFamily: "Inter, sans-serif",
               fontWeight: "40px",
               fontSize: "30px",
               color: "rgb(255,255,255)"
             }}
           >
-            <Typography sx = {{ color: "rgb(255,255,255)"}} level = "h3">Welcome to BoardX!</Typography>
+            <Typography sx = {{ color: "black"}} level = "h3">Welcome to BoardX!</Typography>
           </div>
               <FormControl>
           <div style={{ margin: "20px 0" }}>
