@@ -5,6 +5,25 @@ import FormLabel from '@mui/joy/FormLabel';
 import FormHelperText from '@mui/joy/FormHelperText';
 import { InfoOutlined } from "@mui/icons-material";
 
+
+export default function EmailInput() {
+  return (
+    <FormControl>
+      <FormLabel htmlFor="email-input">Email</FormLabel>
+      <Input
+        id="email-input"
+        variant="outlined"
+        color="primary"
+        sx={{ backgroundColor: "white", "--Input-focusedHighlight": "gray" }}
+        placeholder="Email"
+      />
+    </FormControl>
+  );
+}
+
+
+
+/*
 export default function InfoBar() {
   return (
     
@@ -18,3 +37,4 @@ export default function InfoBar() {
     
   );
 }
+*/
