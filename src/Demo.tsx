@@ -56,7 +56,7 @@ export default function SignInSheet() {
           justifyContent: "center",
           padding: "20px",
           backgroundColor: "white",
-          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", // Adjusted boxShadow value
+          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)", // Adjusted boxShadow value
         })}
       >
         <div style={{ width: "100%", textAlign: "center" }}>
