@@ -1,3 +1,5 @@
+/*
+//Demo.tsx
 import * as React from "react";
 import Card from "@mui/joy/Card";
 import Typography from "@mui/joy/Typography";
@@ -68,18 +70,17 @@ export default function SignInSheet() {
             style={{
               maxWidth: "150px", // Set the maximum width to 150px
               height: "auto"  // This will keep the aspect ratio intact
-
-                /*
               textAlign: "center",
               fontFamily: "Inter, sans-serif",
               fontWeight: "40px",
               fontSize: "30px",
               color: "rgb(255,255,255)"
-              */
+
+
             }}
           >
 
-        <Typography level="h3" sx={{ /* ... */ }}>
+        <Typography level="h3" sx={{ /* ... */    /* }}>
         Welcome to BoardX!
       </Typography>
       <FormControl fullWidth>
@@ -98,7 +99,7 @@ export default function SignInSheet() {
         <LogInButton />
       </FormControl>
       <ForgotPassword />
-
+*/
 
 
 
@@ -122,9 +123,48 @@ export default function SignInSheet() {
           </div>
                 </FormControl>
           */
-          
+          /*
         </div>
       </Card>
     </div>
   );
 }
+
+*/
+
+
+
+
+import * as React from "react";
+import Card from "@mui/joy/Card";
+import Typography from "@mui/joy/Typography";
+import TextField from '@mui/material/TextField'; // Import TextField
+import LogInButton from "./components/LogInButton";
+import ForgotPassword from "./components/ForgotPassword";
+import './styles.css'; // Make sure this path is correct based on where you place your styles.css file
+
+export default function SignInSheet() {
+  // ... useState hooks
+
+  return (
+    <div className="container">
+      <Card className="login-card">
+        <img 
+          src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" 
+          alt="BoardX Logo" 
+          className="logo"
+        />
+        <Typography level="h3" className="welcome-message">
+          Welcome to BoardX!
+        </Typography>
+        <FormControl fullWidth className="form-control">
+          <TextField label="Email" type="email" variant="outlined" className="input-field" />
+          <TextField label="Password" type="password" variant="outlined" className="input-field" />
+          <LogInButton className="login-button" />
+        </FormControl>
+        <ForgotPassword className="forgot-password" />
+      </Card>
+    </div>
+  );
+}
+
