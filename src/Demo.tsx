@@ -10,8 +10,6 @@ import ForgotPassword from "./components/ForgotPassword";
 import { extendTheme } from "@mui/joy";
 import FormControl from "@mui/joy/FormControl";
 
-
-
 const theme = extendTheme({colorSchemes: {
   light: {
     shadowChannel: '12 12 12',
@@ -40,7 +38,7 @@ export default function SignInSheet() {
     <div
       style={{
         margin: -8,
-        padding: 0,
+        padding: 20px,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -60,6 +58,7 @@ export default function SignInSheet() {
           padding: "20px",
           backgroundColor: "white",
           boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", // Adjusted boxShadow value
+          paddingBottom: '40px' // Add more padding to the bottom of the card
         })}
       >
           <div style={{ width: "100%", textAlign: "center" }}>
