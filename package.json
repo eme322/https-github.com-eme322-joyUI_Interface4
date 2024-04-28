@@ -1,9 +1,8 @@
 {
   "dependencies": {
-    "@mui/icons-material": "latest", 
-    "@mui/material": "latest",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
     "@mui/joy": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -11,15 +10,27 @@
     "react-dom": "latest",
     "typescript": "latest"
   },
-  "description":"This is my React app using MUI Joy UI components.",
+  "description": "https://github.com/mui/material-ui/blob/v5.15.15/docs/data/joy/getting-started/usage/ButtonUsage.tsx",
   "devDependencies": {
-    "react-scripts": "latest"
+    "react-scripts": "^5.0.1"
   },
   "main": "index.tsx",
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
