@@ -46,39 +46,6 @@ export default function SignInSheet() {
       }}
     >
 
-
-      
-            {/* Add the Email and Password labels here, outside and above the Card */}
-      <Typography
-        sx={{
-          mt: 2,
-          mb: 2, // Adjust the margin as needed
-          fontSize: "20px", // Adjust font size as needed
-          color: "rgb(0,0,0)", // Change the color as needed
-          alignSelf: "start", // Align to the start of the container
-          width: "100%", // Take full width
-          paddingLeft: "20px", // Add padding to match the Card's internal spacing
-        }}
-        component="h2"
-      >
-        Email
-      </Typography>
-      
-      <Typography
-        sx={{
-          mt: 2,
-          mb: 2, // Adjust the margin as needed
-          fontSize: "20px", // Adjust font size as needed
-          color: "rgb(0,0,0)", // Change the color as needed
-          alignSelf: "start", // Align to the start of the container
-          width: "100%", // Take full width
-          paddingLeft: "20px", // Add padding to match the Card's internal spacing
-        }}
-        component="h2"
-      >
-        Password
-      </Typography>
-
       
       <Card
         variant="solid"
@@ -110,6 +77,33 @@ export default function SignInSheet() {
               */
             }}
           >
+
+        <Typography level="h3" sx={{ /* ... */ }}>
+        Welcome to BoardX!
+      </Typography>
+      <FormControl fullWidth>
+        <TextField
+          label="Email"
+          type="email"
+          variant="outlined"
+          margin="normal" // This adds some space around the TextField
+        />
+        <TextField
+          label="Password"
+          type="password"
+          variant="outlined"
+          margin="normal" // This adds some space around the TextField
+        />
+        <LogInButton />
+      </FormControl>
+      <ForgotPassword />
+
+
+
+
+
+            
+            /*
             <Typography sx = {{ color: "black"}} level = "h3">Welcome to BoardX!</Typography>
           </div>
               <FormControl>
@@ -126,6 +120,8 @@ export default function SignInSheet() {
             <ForgotPassword />
           </div>
                 </FormControl>
+          */
+          
         </div>
       </Card>
     </div>
