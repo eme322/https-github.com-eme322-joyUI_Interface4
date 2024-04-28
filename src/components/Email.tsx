@@ -15,8 +15,8 @@ export default function EmailInput() {
         id="email-input"
         type="email" 
         variant="outlined"
-        color="primary"
-        sx={{ backgroundColor: "white", "--Input-focusedHighlight": "gray" }}
+        color="neutral"
+        sx={{ backgroundColor: "white"}} //, "--Input-focusedHighlight": "gray" }}
         placeholder="" 
       />
     </FormControl>
