@@ -13,7 +13,7 @@ export default function EmailInput() {
       <FormLabel htmlFor="email-input">Email</FormLabel>
       <Input
         id="email-input"
-        type="email" // Add type for email inputs
+        type="email" 
         variant="outlined"
         color="primary"
         sx={{ backgroundColor: "white", "--Input-focusedHighlight": "gray" }}
@@ -22,20 +22,3 @@ export default function EmailInput() {
     </FormControl>
   );
 }
-
-
-/*
-export default function InfoBar() {
-  return (
-    
-      <Input
-      variant="outlined"
-      color="primary"
-      sx={{ backgroundColor: "white", "--Input-focusedHighlight": "gray" }}
-      placeholder="Email"
-    />
-    
-    
-  );
-}
-*/
