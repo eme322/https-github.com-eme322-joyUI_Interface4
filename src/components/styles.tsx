@@ -19,6 +19,11 @@ export const ForgotPasswordLink = styled.a`
   }
 `;
 
+#logo {
+  width: 100px; /* Adjust width as needed */
+  height: auto; /* This will maintain the aspect ratio */
+}
+
 export const globalStyles = () => (
   <Global
     styles={css`
