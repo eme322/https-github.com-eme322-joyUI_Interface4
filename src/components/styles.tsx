@@ -1,5 +1,6 @@
 // joyUI_Interface1/src/components/styles.tsx
 // styles.tsx
+import * as React from 'react';
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
 
