@@ -38,7 +38,7 @@ export default function SignInSheet() {
     <div
       style={{
         margin: -8,
-        padding: 20px,
+        padding:'20px',
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -63,20 +63,20 @@ export default function SignInSheet() {
       >
           <div style={{ width: "100%", textAlign: "center" }}>
           <img id="logo" src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="BoardX Logo" />
-          <Typography 
+         
+            <Typography 
             sx={{ 
               color: "black", 
               textAlign: 'center',
               width: '100%',
-              fontSize: '30px',
+              fontSize: '24px',
               fontWeight: 'bold',
             }} 
             level="h4"
           >
             Welcome to BoardX! 👋
+            
           </Typography>
-          {/* The FormControl and its children components are commented out.
-               If you want them to render, remove the comment block. */}
           {
           <FormControl>
             <div style={{ margin: "20px 0" }}>
