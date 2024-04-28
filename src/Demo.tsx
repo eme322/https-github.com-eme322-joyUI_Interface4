@@ -1,92 +1,93 @@
-import * as React from 'react';
-import { useColorScheme } from '@mui/joy/styles';
-import Sheet from '@mui/joy/Sheet';
-import CssBaseline from '@mui/joy/CssBaseline';
-import Typography from '@mui/joy/Typography';
-import FormControl from '@mui/joy/FormControl';
-import FormLabel from '@mui/joy/FormLabel';
-import Input from '@mui/joy/Input';
-import Button from '@mui/joy/Button';
-import Link from '@mui/joy/Link';
+import * as React from "react";
+import Card from "@mui/joy/Card";
+import Typography from "@mui/joy/Typography";
+import Email from "./components/Email";
+import Password from "./components/Password";
+import AspectRatio from "@mui/joy/AspectRatio";
+import LogInButton from "./components/LogInButton";
+import ForgotPassword from "./components/ForgotPassword";
+import { extendTheme } from "@mui/joy";
+import FormControl from "@mui/joy/FormControl";
 
-function ModeToggle() {
-  const { mode, setMode } = useColorScheme();
-  const [mounted, setMounted] = React.useState(false);
+const theme = extendTheme({colorSchemes: {
+  light: {
+    shadowChannel: '12 12 12',
+  },
+  dark: {
+    shadowChannel: '0 0 0',
+  },
+},
+});
 
-  // necessary for server-side rendering
-  // because mode is undefined on the server
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-  if (!mounted) {
-    return <Button variant="soft">Change mode</Button>;
-  }
+export default function SignInSheet() {
+
+  const [email, setEmail] = React.useState('');
+  const [error, setError] = React.useState(false);
+
+  const handleSubmit = () => {
+    if (!email.trim()) {
+      setError(true);
+    } else {
+      setError(false);
+      // Handle form submission logic here
+    }
+  };
 
   return (
-    <Button
-      variant="soft"
-      onClick={() => {
-        setMode(mode === 'light' ? 'dark' : 'light');
+    <div
+      style={{
+        margin: -8,
+        padding: 0,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+        backgroundColor: "#121212",
       }}
     >
-      {mode === 'light' ? 'Turn dark' : 'Turn light'}
-    </Button>
-  );
-}
-
-export default function LoginFinal() {
-  return (
-    <main>
-      <ModeToggle />
-      <CssBaseline />
-      <Sheet
-        sx={{
-          width: 300,
-          mx: 'auto', // margin left & right
-          my: 4, // margin top & bottom
-          py: 3, // padding top & bottom
-          px: 2, // padding left & right
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 2,
-          borderRadius: 'sm',
-          boxShadow: 'md',
-        }}
-        variant="outlined"
+      <Card
+        variant="solid"
+        sx={(theme) => ({
+          width: 450,
+          height: 406,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "20px",
+          backgroundColor: "#121212",
+          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", // Adjusted boxShadow value
+        })}
       >
-        <div>
-          <Typography level="h4" component="h1">
-            <b>Welcome!</b>
-          </Typography>
-          <Typography level="body-sm">Sign in to continue.</Typography>
+        <div style={{ width: "100%", textAlign: "center" }}>
+          <img src="boardxlogo.png" alt="BoardX Logo" />
+          <div
+            style={{
+              textAlign: "left",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: "40px",
+              fontSize: "30px",
+              color: "rgb(255,255,255)"
+            }}
+          >
+            <Typography sx = {{ color: "rgb(255,255,255)"}} level = "h3">Welcome to BoardX!</Typography>
+          </div>
+              <FormControl>
+          <div style={{ margin: "20px 0" }}>
+            <Email />
+          </div>
+          <div style={{ margin: "20px 0" }}>
+            <Password />
+          </div>
+          <div style={{ margin: "20px 0" }}>
+            <LogInButton />
+          </div>
+          <div style={{ margin: "20px 0" }}>
+            <ForgotPassword />
+          </div>
+                </FormControl>
         </div>
-        <FormControl>
-          <FormLabel>Email</FormLabel>
-          <Input
-            // html input attribute
-            name="email"
-            type="email"
-            placeholder="johndoe@email.com"
-          />
-        </FormControl>
-        <FormControl>
-          <FormLabel>Password</FormLabel>
-          <Input
-            // html input attribute
-            name="password"
-            type="password"
-            placeholder="password"
-          />
-        </FormControl>
-        <Button sx={{ mt: 1 /* margin top */ }}>Log in</Button>
-        <Typography
-          endDecorator={<Link href="/sign-up">Sign up</Link>}
-          fontSize="sm"
-          sx={{ alignSelf: 'center' }}
-        >
-          Don&apos;t have an account?
-        </Typography>
-      </Sheet>
-    </main>
+      </Card>
+    </div>
   );
 }
