@@ -10,7 +10,7 @@ export const ForgotPasswordLink = styled.a`
   cursor: pointer;
   &:hover {
     text-decoration: underline; // Underline on hover to indicate interactivity
-    color: #your-hover-color; // Optionally change color on hover
+    color: darken(#D8819E, 10%);
   }
 `;
 
