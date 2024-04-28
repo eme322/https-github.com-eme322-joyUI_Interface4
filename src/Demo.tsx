@@ -62,7 +62,7 @@ export default function SignInSheet() {
         })}
       >
         <div style={{ width: "100%", textAlign: "center" }}>
-          <img src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="BoardX Logo" />
+          <img id="logo" src="https://www.boardx.us/content/images/2023/11/BoardX-Logo.png" alt="BoardX Logo" />
           <div
             style={{
               textAlign: "left",
