@@ -1,5 +1,5 @@
 // joyUI_Interface1/src/components/styles.ts
-
+// styles.ts
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
 
@@ -17,12 +17,16 @@ export const ForgotPasswordLink = styled.a`
     background-color: #430A1F;
   }
 `;
-export const globalStyles = <Global
-  styles={css`
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    }
-  `}
-/>
+
+export const globalStyles = () => (
+  <Global
+    styles={css`
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      }
+    `}
+  />
+);
+
