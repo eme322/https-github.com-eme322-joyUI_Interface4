@@ -1,9 +1,7 @@
+// joyUI_Interface1/src/styles.js
 
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
-
-
-
 
 export const ForgotPasswordLink = styled.a`
   width: 450px;
