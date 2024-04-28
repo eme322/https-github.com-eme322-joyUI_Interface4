@@ -72,7 +72,7 @@ export default function SignInSheet() {
               color: "rgb(255,255,255)"
             }}
           >
-            <Typography sx = {{ color: "white"}} level = "h3">Welcome to BoardX!</Typography>
+            <Typography sx = {{ color: "black"}} level = "h3">Welcome to BoardX!</Typography>
           </div>
               <FormControl>
           <div style={{ margin: "20px 0" }}>
