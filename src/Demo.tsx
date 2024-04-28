@@ -44,7 +44,7 @@ export default function SignInSheet() {
         alignItems: "center",
         minHeight: "100vh",
         backgroundColor: "white",
-        flexDirection: "column", // Stack children vertically
+
       }}
     >
       <Card
