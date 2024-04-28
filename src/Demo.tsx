@@ -77,7 +77,7 @@ export default function SignInSheet() {
           </Typography>
           {/* The FormControl and its children components are commented out.
                If you want them to render, remove the comment block. */}
-          {/*
+          {
           <FormControl>
             <div style={{ margin: "20px 0" }}>
               <Email />
@@ -92,7 +92,7 @@ export default function SignInSheet() {
               <ForgotPassword />
             </div>
           </FormControl>
-          */}
+          }
         </div>
       </Card>
     </div>
