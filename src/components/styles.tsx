@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
 
 export const ForgotPasswordLink = styled.a`
-  color: #D8819E; // Your brand color or whatever color you want the link to be
+  color: #F21D6B;
   text-decoration: none; // No underline by default
   cursor: pointer;
   &:hover {
