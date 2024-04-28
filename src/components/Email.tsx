@@ -11,7 +11,7 @@ export default function InfoBar() {
       <Input
       variant="outlined"
       color="primary"
-      sx={{ backgroundColor: "#0B0D0E", "--Input-focusedHighlight": "gray" }}
+      sx={{ backgroundColor: "white", "--Input-focusedHighlight": "gray" }}
       placeholder="Email"
     />
     
