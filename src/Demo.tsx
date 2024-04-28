@@ -8,7 +8,7 @@ import AspectRatio from "@mui/joy/AspectRatio";
 import LogInButton from "./components/LogInButton";
 import ForgotPassword from "./components/ForgotPassword";
 import { extendTheme } from "@mui/joy";
-//import FormControl from "@mui/joy/FormControl";
+import FormControl from "@mui/joy/FormControl";
 
 
 const theme = extendTheme({colorSchemes: {
