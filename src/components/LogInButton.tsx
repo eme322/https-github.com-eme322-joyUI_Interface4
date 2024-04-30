@@ -9,6 +9,6 @@ export default function BasicButtons() {
   };
 
   return (
-    <Button onClick={handleClick} sx={{ width: 450, backgroundColor: '#F21D6B', '&:hover': { backgroundColor: '#FF4081' } }}>Sign In</Button>
+    <Button onClick={handleClick} sx={{ width: 450, backgroundColor: '#F21D6B', '&:hover': { backgroundColor: '#FF4081' } }}>Create</Button>
   );
 }
